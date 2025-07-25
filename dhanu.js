@@ -7,7 +7,7 @@ toggle.addEventListener("click", () => {
 
 const products = [
   {
-    name: "Classic Mahroon  T-Shirt",
+    name: "Classic maroon   T-Shirt",
     desc: "Premium cotton slim fit",
     price: 499,
     quantity: 320,
