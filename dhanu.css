@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+  background-color: #d2cdc8;
+}
+
+.intro-container {
+  height: 110vh;
+}
+.nav nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+
+  padding: 13px;
+}
+
+/* .line {
+  height: 2px;
+  width: 80%;
+  margin: auto;
+  color: black;
+  background-color: black;
+}
+.secondline {
+  height: 80vh;
+  width: 2px;
+  position: absolute;
+  margin-left: 90%;
+ 
+
+  
+  background-color: black;
+} */
+/* .secondline h1 {
+  margin-left: 44px;
+  writing-mode: vertical-rl;
+  opacity: 0.5;
+  letter-spacing: 50px;
+} */
+.logo img {
+  height: 73px;
+  cursor: pointer;
+}
+.middle-nav {
+  display: flex;
+  list-style: none;
+  gap: 5rem;
+  font-size: 18px;
+}
+
+.middle-nav a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+.middle-nav a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+
+  height: 3px;
+
+  background-color: red;
+  transition: width 0.3s ease-in-out;
+  transition-behavior: normal;
+}
+.middle-nav a:hover:after {
+  width: 100%;
+}
+.last-nav {
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+}
+.border {
+  height: fit-content;
+  width: 90%;
+  border: 3px solid black;
+  box-shadow: 0 0 20px;
+  margin: auto;
+}
+.first-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.first-containt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+
+  font-size: 44px;
+}
+.first-containt h1 {
+  color: black;
+  text-shadow: 6px 6px 0px rgb(225, 53, 53);
+  font-family: "UnifrakturMaguntia", cursive;
+}
+.first-containt h2 {
+  color: black;
+  text-shadow: 6px 6px 0px rgb(225, 53, 53);
+  font-family: "UnifrakturMaguntia", cursive;
+}
+.first-containt a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-shadow: 1px 4px 0px rgb(225, 53, 53);
+  font-family: "Tinos", serif;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.first-containt a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  left: 0;
+
+  width: 100%;
+  height: 0;
+  transition: 0.3s;
+
+  background-color: rgb(202, 95, 95);
+  z-index: -1;
+}
+.first-containt a:hover::before {
+  height: 100%;
+}
+
+.hilight-product h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 39px;
+  color: red;
+}
+#product-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 23px;
+ 
+  width: 90%;
+  margin: auto;
+}
+
+.inner-product-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#product-box img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#product-box button {
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgb(29, 198, 213);
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgb(84, 88, 85);
+  margin-top: 10px;
+}
+#product-box button:hover {
+  background-color: rgb(13, 215, 234);
+}
+
+.image img {
+  height: 100px;
+  display: flex;
+  margin: auto;
+}
+
+.details h2 {
+  justify-content: center;
+  display: flex;
+}
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+}
+.invoice p {
+  font-size: 25px;
+  display: flex;
+  margin-left: 20%;
+}
+
+button:disabled {
+  background: grey;
+  cursor: not-allowed;
+}
+#invoice {
+  display: none;
+}
+
+.copy-right {
+  display: flex;
+  padding: 20px;
+  margin-top: 50px;
+  justify-content: center;
+  gap: 50px;
+}
+
+.copy-right a {
+  text-decoration: none;
+  color: black;
+}
+.copy-right a:hover {
+  color: rgb(82, 78, 78);
+  transition: 0.2s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .middle-nav {
+    display: none;
+  }
+  .logo {
+    margin: auto;
+  }
+  .first-page {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .first-page h1 {
+    margin-top: 30px;
+  }
+  /* .border{
+  height: fit-content;
+} */
+
+  .middle-nav {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 30%;
+    flex-direction: column;
+    background-color: black;
+    display: none;
+    padding: 30px;
+    gap: 1rem;
+  }
+  .middle-nav a {
+    margin: auto;
+    color: white;
+  }
+  .middle-nav.active {
+    display: flex;
+  }
+
+  .last-nav {
+    display: flex;
+  }
+  .intro-container {
+    height: 115vh;
+  }
+  .first-image img{
+    position: relative;
+
+  }
+  #product-box{
+    margin-top: 160px;
+  }
+  
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #invoice,
+  #invoice * {
+    visibility: visible;
+  }
+
+  #invoice {
+    position: absolute;
+    top: 0;
+
+    left: 0;
+    height: 33%;
+    padding: 20px;
+    width: 100%;
+  }
+}
